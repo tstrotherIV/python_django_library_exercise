@@ -20,7 +20,13 @@ VALUES
 
 
 select
-  libr.id,
-  libr.title,
-  libr.address
-from libraryapp_library as libr
+  l.id,
+  l.location_id,
+  l.user_id,
+  u.first_name,
+  u.last_name,
+  u.email,
+  libr.title
+from libraryapp_librarian l
+  join auth_user u on l.user_id = u.id
+  JOIN libraryapp_library libr on l.location_id = libr.id
