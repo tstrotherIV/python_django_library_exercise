@@ -1,0 +1,11 @@
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+.vscode
+libraryapp/views/connection.py
+libraryenv/ ( if your virtual env directory is a sibling of manage.py. Otherwise, you don't need to ignore it. Change this based on what your venv is actually called. For this project it's libraryenv. For others you might call it something else ) 
+library.connection.sql ( Or whatever you named your connection to the db with SQLTools )
